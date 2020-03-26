@@ -30,3 +30,20 @@ read -p "Enter Mobile Number" Mobile
 	else
 		echo "invalid"
 	fi
+read -p "Please enter password: " User_passwd
+count1=0
+if [[ ${#User_passwd} -ge 8 ]]
+then
+    count1=1
+fi
+
+if [[ "$count1" == 1 ]]
+then
+     echo "Valid"
+fi
+
+if [[ "$count1" = 0 ]]
+then
+   echo "Weak Password! It should include at least 8 characters."
+fi
+
