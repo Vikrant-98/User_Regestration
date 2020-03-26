@@ -33,18 +33,23 @@ read -p "Enter Mobile Number" Mobile
 read -p "Please enter password: " User_passwd
 count1=0
 count2=0
+count3=0
 if [[ ${#User_passwd} -ge 8 ]]
 then
     count1=1
 fi
 
-if [[ "$count1" == 1 && "$count2" == 1 ]]
+if [[ "$count1" == 1 && "$count2" == 1 && "$count3" == 1 ]]
 then
      echo "Strong Password"
 fi
 if [[ "$User_passwd" = *[A-Z]* ]]
 then
     count2=1
+fi
+if [[ "$User_passwd" = *[0-9]* ]]
+then
+    count3=1
 fi
 if [[ "$count1" = 0 ]]
 then
@@ -54,4 +59,7 @@ if [[ "$count2" = 0 ]]
 then
     echo "Weak Password! It should include at least 1 upper case letter."
 fi
-
+if [[ "$count3" = 0 ]]
+then
+    echo "Weak Password! It should include at least 1 number."
+fi
