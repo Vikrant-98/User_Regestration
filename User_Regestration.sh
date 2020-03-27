@@ -130,11 +130,12 @@ if [ $user_Register -eq 5 ]
 then
 	echo "$First_Name $Last_Name Registered Succesfully!!!!!!!!!!!!!!"
 fi
+echo "Checking mail sample valid or not "
 while [ $input -eq 0 ]
 
-	echo "Do you want to check mail sample valid or not "
-	read -p " Enter 0 for yes or any for exit :" input
-
 	Mail$()
+
+	echo "Do you Continue to check mail sample valid or not "
+	read -p " Enter 0 for yes or any for exit :" input
 
 done
