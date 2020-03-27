@@ -132,7 +132,7 @@ then
 fi
 echo "Checking mail sample valid or not "
 while [ $input -eq 0 ]
-
+do
 	Mail$()
 
 	echo "Do you Continue to check mail sample valid or not "
